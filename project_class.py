@@ -203,9 +203,10 @@ import random
                    enemy.location == self.location:
                     damage = self.weapon.damage[move]
                     if damage > 0:
-                        enemy.health -= random.choice(damage)
+                        d = random.choice(damage)
+                        enemy.health -= d
                     print('\n{} has been hit for '.format(
-                        enemy.name) + str(damage) + '!\n')
+                        enemy.name) + str(d) + '!\n')
                     if enemy.health <= 0:
                         print('\n{} has blacked out!\n'.format(enemy.name))
                         if enemy.weapon:
